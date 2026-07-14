@@ -1,5 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
-  "public": true
+  "deploymentProtection": {
+    "production": "none",
+    "preview": "none"
+  }
 }
