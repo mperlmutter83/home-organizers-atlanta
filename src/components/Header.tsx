@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function Header() {
@@ -15,12 +16,19 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="bg-gray-900 shadow-sm sticky top-0 z-50">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 items-center">
+        <div className="flex justify-between h-20 items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <span className="text-xl font-bold text-emerald-700">Home Organizers Atlanta</span>
+            <Image
+              src="/logo.jpg"
+              alt="Home Organizers Atlanta"
+              width={180}
+              height={60}
+              className="h-14 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -29,7 +37,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-emerald-600 font-medium transition-colors"
+                className="text-white hover:text-emerald-400 font-medium transition-colors"
               >
                 {item.name}
               </Link>
@@ -45,7 +53,7 @@ export default function Header() {
           {/* Mobile menu button */}
           <button
             type="button"
-            className="md:hidden p-2 rounded-md text-gray-700"
+            className="md:hidden p-2 rounded-md text-white"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -60,12 +68,12 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t">
+          <div className="md:hidden py-4 border-t border-gray-700">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="block py-2 text-gray-700 hover:text-emerald-600 font-medium"
+                className="block py-2 text-white hover:text-emerald-400 font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.name}
