@@ -51,11 +51,11 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-emerald-50 to-teal-100 py-20">
+      <section className="relative bg-gradient-to-br from-teal-50 to-teal-100 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-emerald-600 font-semibold mb-4">Transform Your Space with Ease</p>
+              <p className="text-teal-600 font-semibold mb-4">Transform Your Space with Ease</p>
               <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                 Home Organizers Atlanta: Your Path to a Clutter-Free Life
               </h1>
@@ -64,7 +64,7 @@ export default function AboutPage() {
               </p>
               <Link
                 href="/contact"
-                className="inline-block bg-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
+                className="inline-block bg-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-teal-700 transition-colors"
               >
                 Schedule Your Free Consultation
               </Link>
@@ -113,11 +113,11 @@ export default function AboutPage() {
             {timeline.map((item, index) => (
               <div key={index} className="flex gap-6">
                 <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                  <div className="w-16 h-16 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
                     {item.year}
                   </div>
                   {index < timeline.length - 1 && (
-                    <div className="w-0.5 h-full bg-emerald-200 mt-2" />
+                    <div className="w-0.5 h-full bg-teal-200 mt-2" />
                   )}
                 </div>
                 <div className="pb-8">
@@ -137,13 +137,13 @@ export default function AboutPage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {awards.map((award, index) => (
-              <div key={index} className="bg-emerald-50 rounded-xl p-8 text-center">
-                <div className="w-16 h-16 bg-emerald-600 text-white rounded-full flex items-center justify-center mx-auto mb-4">
+              <div key={index} className="bg-teal-50 rounded-xl p-8 text-center">
+                <div className="w-16 h-16 bg-teal-600 text-white rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                   </svg>
                 </div>
-                <p className="text-emerald-600 font-semibold mb-2">{award.year}</p>
+                <p className="text-teal-600 font-semibold mb-2">{award.year}</p>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{award.title}</h3>
                 <p className="text-gray-600">{award.description}</p>
               </div>
@@ -153,15 +153,15 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-emerald-700">
+      <section className="py-20 bg-teal-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Transform Your Space with Our Expertise</h2>
-          <p className="text-xl text-emerald-100 mb-8">
+          <p className="text-xl text-teal-100 mb-8">
             Discover how our tailored organization solutions can bring harmony to your home or office. Schedule a free consultation today and let us show you the path to a clutter-free life.
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-white text-emerald-700 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-50 transition-colors"
+            className="inline-block bg-white text-teal-700 px-8 py-4 rounded-lg font-semibold hover:bg-teal-50 transition-colors"
           >
             Book Your Free Consultation
           </Link>

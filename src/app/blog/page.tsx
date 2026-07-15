@@ -21,11 +21,11 @@ export default function BlogPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-emerald-50 to-teal-100 py-20">
+      <section className="relative bg-gradient-to-br from-teal-50 to-teal-100 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-emerald-600 font-semibold mb-4">Transform Your Space with Ease</p>
+              <p className="text-teal-600 font-semibold mb-4">Transform Your Space with Ease</p>
               <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                 Home Organizers Atlanta: Your Path to a Clutter-Free Life
               </h1>
@@ -34,7 +34,7 @@ export default function BlogPage() {
               </p>
               <Link
                 href="/contact"
-                className="inline-block bg-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
+                className="inline-block bg-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-teal-700 transition-colors"
               >
                 Get Started Today
               </Link>
@@ -79,8 +79,8 @@ export default function BlogPage() {
                 key={index}
                 className="bg-white rounded-xl p-6 text-center hover:shadow-lg transition-shadow cursor-pointer"
               >
-                <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-6 h-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-6 h-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
                   </svg>
                 </div>
@@ -103,11 +103,11 @@ export default function BlogPage() {
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+              className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
             />
             <button
               type="submit"
-              className="bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
+              className="bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors"
             >
               Subscribe
             </button>
@@ -116,15 +116,15 @@ export default function BlogPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-emerald-700">
+      <section className="py-20 bg-teal-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Schedule Your Free Consultation Today</h2>
-          <p className="text-xl text-emerald-100 mb-8">
+          <p className="text-xl text-teal-100 mb-8">
             Ready to take control of your space and reduce stress? Book a complimentary consultation with our experts at Home Organizers Atlanta and discover how we can create lasting organization solutions for you.
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-white text-emerald-700 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-50 transition-colors"
+            className="inline-block bg-white text-teal-700 px-8 py-4 rounded-lg font-semibold hover:bg-teal-50 transition-colors"
           >
             Get Started
           </Link>

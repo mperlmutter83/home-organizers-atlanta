@@ -51,7 +51,7 @@ export default function LeadForm({ className = '' }: LeadFormProps) {
           required
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
           placeholder="Your name"
         />
       </div>
@@ -66,7 +66,7 @@ export default function LeadForm({ className = '' }: LeadFormProps) {
           required
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
           placeholder="your@email.com"
         />
       </div>
@@ -80,7 +80,7 @@ export default function LeadForm({ className = '' }: LeadFormProps) {
           id="phone"
           value={formData.phone}
           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
           placeholder="(404) 555-0123"
         />
       </div>
@@ -93,7 +93,7 @@ export default function LeadForm({ className = '' }: LeadFormProps) {
           id="service"
           value={formData.service}
           onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
         >
           <option value="">Select a service</option>
           <option value="home-organization">Home Organization</option>
@@ -113,7 +113,7 @@ export default function LeadForm({ className = '' }: LeadFormProps) {
           rows={4}
           value={formData.message}
           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
           placeholder="Tell us about your organization needs..."
         />
       </div>
@@ -121,7 +121,7 @@ export default function LeadForm({ className = '' }: LeadFormProps) {
       <button
         type="submit"
         disabled={status === 'submitting'}
-        className="w-full bg-emerald-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-emerald-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full bg-teal-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-teal-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {status === 'submitting' ? 'Sending...' : 'Schedule Free Consultation'}
       </button>

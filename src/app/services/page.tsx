@@ -13,7 +13,7 @@ export default function ServicesPage() {
       title: 'Home Decluttering',
       description: 'Eliminate chaos and reclaim your living space with our comprehensive home decluttering services, tailored to your unique needs.',
       icon: (
-        <svg className="w-8 h-8 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg className="w-8 h-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
         </svg>
       ),
@@ -22,7 +22,7 @@ export default function ServicesPage() {
       title: 'Office Optimization',
       description: 'Boost productivity and efficiency with our office organization solutions, designed to streamline your workspace and workflow.',
       icon: (
-        <svg className="w-8 h-8 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg className="w-8 h-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
         </svg>
       ),
@@ -31,7 +31,7 @@ export default function ServicesPage() {
       title: 'Custom Closet Design',
       description: 'Maximize your storage potential with our custom closet solutions, crafted to fit your lifestyle and aesthetic preferences.',
       icon: (
-        <svg className="w-8 h-8 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg className="w-8 h-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
         </svg>
       ),
@@ -56,11 +56,11 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-emerald-50 to-teal-100 py-20">
+      <section className="relative bg-gradient-to-br from-teal-50 to-teal-100 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-emerald-600 font-semibold mb-4">Transform Your Space, Transform Your Life</p>
+              <p className="text-teal-600 font-semibold mb-4">Transform Your Space, Transform Your Life</p>
               <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                 Professional Organization Services in Atlanta
               </h1>
@@ -69,7 +69,7 @@ export default function ServicesPage() {
               </p>
               <Link
                 href="/contact"
-                className="inline-block bg-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
+                className="inline-block bg-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-teal-700 transition-colors"
               >
                 Get Your Free Consultation
               </Link>
@@ -93,7 +93,7 @@ export default function ServicesPage() {
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow">
-                <div className="w-14 h-14 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
+                <div className="w-14 h-14 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
                   {service.icon}
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
@@ -143,7 +143,7 @@ export default function ServicesPage() {
               </div>
               <Link
                 href="/about"
-                className="inline-block mt-6 text-emerald-600 font-semibold hover:text-emerald-700"
+                className="inline-block mt-6 text-teal-600 font-semibold hover:text-teal-700"
               >
                 Learn More About Us →
               </Link>
@@ -160,7 +160,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Lead Form Section */}
-      <section className="py-20 bg-emerald-50">
+      <section className="py-20 bg-teal-50">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Schedule Your Free Consultation Today</h2>
@@ -176,22 +176,22 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-emerald-700">
+      <section className="py-20 bg-teal-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Transform Your Space Today</h2>
-          <p className="text-xl text-emerald-100 mb-8">
+          <p className="text-xl text-teal-100 mb-8">
             Ready to reclaim your space and bring order to your life? Contact us now to schedule a complimentary consultation and discover how our expert team can help you create lasting organization solutions tailored to your needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-white text-emerald-700 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-50 transition-colors"
+              className="bg-white text-teal-700 px-8 py-4 rounded-lg font-semibold hover:bg-teal-50 transition-colors"
             >
               Schedule Your Free Consultation
             </Link>
             <a
               href="tel:+14047379453"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-emerald-600 transition-colors"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-teal-600 transition-colors"
             >
               Call (404) 737-9453
             </a>

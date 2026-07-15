@@ -1,233 +1,150 @@
 import Link from 'next/link';
 
 export default function Home() {
+  const services = [
+    { title: 'Closet Organization', description: 'Maximize your closet space with our tailored organization solutions, ensuring every item has its place.', icon: '👔' },
+    { title: 'Garage Decluttering', description: 'Reclaim your garage with our comprehensive decluttering services, turning chaos into order.', icon: '🚗' },
+    { title: 'Office Setup', description: 'Create a productive work environment with our office setup services, designed to boost efficiency and focus.', icon: '💼' },
+    { title: 'Kitchen Arrangement', description: 'Optimize your kitchen with smart organization solutions for pantry, cabinets, and countertops.', icon: '🍳' },
+    { title: 'Home Decluttering', description: 'Transform your entire home with comprehensive decluttering and organizing services.', icon: '🏠' },
+    { title: 'Moving & Unpacking', description: 'Make your move stress-free with our professional packing and unpacking services.', icon: '📦' },
+  ];
+
   return (
-    <>
+    <div>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-emerald-50 to-teal-100 py-20 lg:py-32">
+      <section className="bg-gradient-to-br from-teal-50 to-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                Transform Your Space. Simplify Your Life.
-              </h1>
-              <p className="text-xl text-gray-600 mb-8">
-                Discover how our expert team can help you reclaim your home and office, creating a serene and efficient environment tailored to your needs.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/contact"
-                  className="bg-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-emerald-700 transition-colors text-center"
-                >
-                  Get a Free Consultation
-                </Link>
-                <a
-                  href="tel:+14047379453"
-                  className="border-2 border-emerald-600 text-emerald-700 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-50 transition-colors text-center"
-                >
-                  Call (404) 737-9453
-                </a>
-              </div>
+          <div className="text-center">
+            <p className="text-teal-600 font-semibold mb-4">Transform Your Space, Transform Your Life</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+              Welcome to Home Organizers<br />Atlanta
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              Discover the art of organization with Home Organizers Atlanta. Elevate your living and working spaces with our expert solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-teal-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-teal-700 transition-colors"
+              >
+                Schedule a Consultation
+              </Link>
+              <a
+                href="tel:+14047379453"
+                className="bg-white text-teal-600 border-2 border-teal-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-teal-50 transition-colors"
+              >
+                Call (404) 737-9453
+              </a>
             </div>
-            <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1622127800587-1ce716f1981e?w=800&h=600&fit=crop"
-                alt="Organized modern workspace"
-                className="rounded-2xl shadow-2xl w-full"
-              />
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">About Home Organizers Atlanta</h2>
+              <p className="text-gray-600 mb-4">
+                Home Organizers Atlanta is dedicated to transforming cluttered spaces into harmonious environments. Our team of professional organizers specializes in creating customized solutions for every room in your home or office.
+              </p>
+              <p className="text-gray-600 mb-6">
+                By optimizing your space, we aim to enhance your lifestyle and productivity. Experience the peace and efficiency that comes with a well-organized space.
+              </p>
+              <Link
+                href="/about"
+                className="text-teal-600 font-semibold hover:text-teal-700 inline-flex items-center"
+              >
+                Learn More About Us
+                <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+            <div className="bg-teal-100 rounded-2xl p-8">
+              <div className="grid grid-cols-2 gap-4 text-center">
+                <div className="bg-white rounded-xl p-6 shadow-sm">
+                  <p className="text-4xl font-bold text-teal-600">500+</p>
+                  <p className="text-gray-600">Homes Organized</p>
+                </div>
+                <div className="bg-white rounded-xl p-6 shadow-sm">
+                  <p className="text-4xl font-bold text-teal-600">10+</p>
+                  <p className="text-gray-600">Years Experience</p>
+                </div>
+                <div className="bg-white rounded-xl p-6 shadow-sm">
+                  <p className="text-4xl font-bold text-teal-600">5★</p>
+                  <p className="text-gray-600">Google Rating</p>
+                </div>
+                <div className="bg-white rounded-xl p-6 shadow-sm">
+                  <p className="text-4xl font-bold text-teal-600">100%</p>
+                  <p className="text-gray-600">Satisfaction</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Discover how we can transform your home or office with our expert organization services.
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Organizing Services</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              From closets to garages, kitchens to home offices, we provide comprehensive organization solutions for every space in your home.
             </p>
           </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Home Organization */}
-            <div className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow">
-              <div className="w-14 h-14 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                </svg>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service) => (
+              <div key={service.title} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                <span className="text-4xl">{service.icon}</span>
+                <h3 className="text-xl font-semibold text-gray-900 mt-4 mb-2">{service.title}</h3>
+                <p className="text-gray-600">{service.description}</p>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Home Organization</h3>
-              <p className="text-gray-600">
-                Revitalize your living spaces with custom solutions for closets, kitchens, and garages.
-              </p>
-            </div>
-
-            {/* Office Organization */}
-            <div className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow">
-              <div className="w-14 h-14 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Office Organization</h3>
-              <p className="text-gray-600">
-                Boost productivity with tailored systems for workspaces and office environments.
-              </p>
-            </div>
-
-            {/* Move-In / Move-Out */}
-            <div className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow">
-              <div className="w-14 h-14 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Move-In / Move-Out Organization</h3>
-              <p className="text-gray-600">
-                Simplify your transition with efficient packing, unpacking, and organizing services.
-              </p>
-            </div>
+            ))}
           </div>
-
-          <div className="text-center mt-12">
+          <div className="text-center mt-8">
             <Link
               href="/services"
-              className="inline-block bg-emerald-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
+              className="inline-block bg-teal-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors"
             >
-              See All Services
+              View All Services
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="py-20 bg-emerald-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Our Simple Process</h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-emerald-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
-                1
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Consultation</h3>
-              <p className="text-gray-600">
-                Start with a consultation to discuss your needs and goals.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-emerald-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
-                2
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Custom Plan</h3>
-              <p className="text-gray-600">
-                Receive a tailored organization plan designed specifically for your space.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-emerald-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
-                3
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Transformation</h3>
-              <p className="text-gray-600">
-                Watch as we transform your environment into a clutter-free oasis.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <img
-                src="https://images.unsplash.com/photo-1723406236695-424c0ccdefe8?w=800&h=1000&fit=crop"
-                alt="Stress-free organized environment"
-                className="rounded-2xl shadow-xl w-full"
-              />
-            </div>
-            <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">Why Choose Us</h2>
-              
-              <div className="space-y-6">
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Save Time & Reduce Stress</h3>
-                    <p className="text-gray-600">
-                      Our organization solutions streamline your space, allowing you to focus on what truly matters.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Maximize Your Space</h3>
-                    <p className="text-gray-600">
-                      We optimize every inch of your home or office, creating functional and efficient areas.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Boost Productivity</h3>
-                    <p className="text-gray-600">
-                      Experience increased productivity and peace of mind with a well-organized environment.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-emerald-700">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Get Organized?</h2>
-          <p className="text-xl text-emerald-100 mb-8">
-            Take the first step towards a clutter-free life. Schedule your free consultation today and discover how we can transform your space into a haven of order and tranquility.
+      <section className="py-16 bg-teal-600">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">Transform Your Space with Expert Help</h2>
+          <p className="text-teal-100 text-lg mb-8 max-w-2xl mx-auto">
+            Ready to reclaim your home or office from clutter? Our team of professional organizers at Home Organizers Atlanta is here to assist you in creating a serene and efficient environment.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-white text-emerald-700 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-50 transition-colors"
-            >
-              Book Your Free Consultation
-            </Link>
-            <a
-              href="tel:+14047379453"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-emerald-600 transition-colors"
-            >
-              Call (404) 737-9453
-            </a>
+          <Link
+            href="/contact"
+            className="inline-block bg-white text-teal-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-teal-50 transition-colors"
+          >
+            Book a Consultation
+          </Link>
+        </div>
+      </section>
+
+      {/* Service Areas */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Serving the Greater Atlanta Area</h2>
+          <div className="flex flex-wrap justify-center gap-3">
+            {['Midtown', 'Buckhead', 'Decatur', 'Sandy Springs', 'Dunwoody', 'Marietta', 'Alpharetta', 'Roswell', 'Johns Creek', 'East Atlanta', 'Virginia Highland', 'Inman Park', 'Grant Park', 'Brookhaven', 'Smyrna'].map((area) => (
+              <span key={area} className="bg-teal-50 text-teal-700 px-4 py-2 rounded-full">
+                {area}
+              </span>
+            ))}
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
