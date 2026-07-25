@@ -69,8 +69,8 @@ export default function ContactPage() {
             </div>
             <div>
               <img
-                src="https://images.unsplash.com/photo-1709100449975-c8585f189316?w=800&h=1000&fit=crop"
-                alt="Neat home interior"
+                src="/images/garage-main.jpg"
+                alt="Professionally organized garage by Home Organizers Atlanta"
                 className="rounded-2xl shadow-2xl w-full"
               />
             </div>

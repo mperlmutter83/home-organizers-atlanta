@@ -81,7 +81,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               "priceRange": "$$",
               "openingHours": "Mo-Fr 09:00-17:00",
               "sameAs": [],
-              "image": "https://homeorganizersatlanta.com/og-image.jpg"
+              "image": "https://homeorganizersatlanta.com/images/garage-main.jpg"
             }),
           }}
         />

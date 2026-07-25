@@ -76,8 +76,8 @@ export default function ServicesPage() {
             </div>
             <div>
               <img
-                src="https://images.unsplash.com/photo-1767800766429-7179fd80948f?w=800&h=800&fit=crop"
-                alt="Organized living room"
+                src="/images/garage-main.jpg"
+                alt="Professionally organized garage by Home Organizers Atlanta"
                 className="rounded-2xl shadow-2xl w-full"
               />
             </div>
@@ -113,7 +113,7 @@ export default function ServicesPage() {
             {whyChooseUs.map((item, index) => (
               <div key={index} className="bg-white rounded-xl overflow-hidden shadow-md">
                 <img
-                  src={`https://images.unsplash.com/photo-${index === 0 ? '1619311731741-d82f87274198' : index === 1 ? '1585899723918-dbdc82d03a02' : '1758518729685-f88df7890776'}?w=800&h=600&fit=crop`}
+                  src={`/images/garage-card-${index + 1}.jpg`}
                   alt={item.title}
                   className="w-full h-48 object-cover"
                 />
@@ -150,8 +150,8 @@ export default function ServicesPage() {
             </div>
             <div>
               <img
-                src="https://images.unsplash.com/photo-1594879036995-b3ea9b53e793?w=800&h=800&fit=crop"
-                alt="Professional consultation"
+                src="/images/garage-main.jpg"
+                alt="Organized garage cabinets and workspace"
                 className="rounded-2xl shadow-xl w-full"
               />
             </div>

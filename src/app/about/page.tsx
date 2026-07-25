@@ -71,8 +71,8 @@ export default function AboutPage() {
             </div>
             <div>
               <img
-                src="https://images.unsplash.com/photo-1594879036995-b3ea9b53e793?w=800&h=800&fit=crop"
-                alt="Professional consultation"
+                src="/images/garage-main.jpg"
+                alt="Professionally organized garage by Home Organizers Atlanta"
                 className="rounded-2xl shadow-2xl w-full"
               />
             </div>
