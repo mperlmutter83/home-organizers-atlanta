@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 interface LeadFormProps {
   className?: string;
@@ -12,25 +12,36 @@ export default function LeadForm({ className = '' }: LeadFormProps) {
     email: '',
     phone: '',
     service: '',
+    consultationType: '',
+    address: '',
     message: '',
   });
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  // Spam-gate metadata (matches CRM expectations)
+  const submissionId = useRef<string>(crypto.randomUUID());
+  const startedAt = useRef<number>(Date.now());
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('submitting');
 
-    // TODO: Replace with your webhook/CRM endpoint
     try {
       const response = await fetch('/api/lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          submission_id: submissionId.current,
+          elapsed_ms: Date.now() - startedAt.current,
+          company_website: (document.getElementById('company_website') as HTMLInputElement)?.value ?? '',
+        }),
       });
 
       if (response.ok) {
         setStatus('success');
-        setFormData({ name: '', email: '', phone: '', service: '', message: '' });
+        setFormData({ name: '', email: '', phone: '', service: '', consultationType: '', address: '', message: '' });
+        submissionId.current = crypto.randomUUID();
+        startedAt.current = Date.now();
       } else {
         setStatus('error');
       }
@@ -39,8 +50,22 @@ export default function LeadForm({ className = '' }: LeadFormProps) {
     }
   };
 
+  const inputClass =
+    'w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500';
+
   return (
     <form onSubmit={handleSubmit} className={`space-y-4 ${className}`}>
+      {/* Honeypot — invisible to humans, bots fill it and get silently dropped */}
+      <input
+        type="text"
+        id="company_website"
+        name="company_website"
+        tabIndex={-1}
+        autoComplete="off"
+        className="absolute -left-[9999px] w-px h-px opacity-0"
+        aria-hidden="true"
+      />
+
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
           Name *
@@ -51,7 +76,7 @@ export default function LeadForm({ className = '' }: LeadFormProps) {
           required
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+          className={inputClass}
           placeholder="Your name"
         />
       </div>
@@ -66,21 +91,22 @@ export default function LeadForm({ className = '' }: LeadFormProps) {
           required
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+          className={inputClass}
           placeholder="your@email.com"
         />
       </div>
 
       <div>
         <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-          Phone
+          Phone *
         </label>
         <input
           type="tel"
           id="phone"
+          required
           value={formData.phone}
           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+          className={inputClass}
           placeholder="(404) 555-0123"
         />
       </div>
@@ -93,7 +119,7 @@ export default function LeadForm({ className = '' }: LeadFormProps) {
           id="service"
           value={formData.service}
           onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+          className={inputClass}
         >
           <option value="">Select a service</option>
           <option value="home-organization">Home Organization</option>
@@ -105,6 +131,40 @@ export default function LeadForm({ className = '' }: LeadFormProps) {
       </div>
 
       <div>
+        <label htmlFor="consultationType" className="block text-sm font-medium text-gray-700 mb-1">
+          Do you prefer an in-person or virtual consultation? *
+        </label>
+        <select
+          id="consultationType"
+          required
+          value={formData.consultationType}
+          onChange={(e) => setFormData({ ...formData, consultationType: e.target.value, address: '' })}
+          className={inputClass}
+        >
+          <option value="">Select an option</option>
+          <option value="in-person">In-Person Consultation</option>
+          <option value="virtual">Virtual Consultation</option>
+        </select>
+      </div>
+
+      {formData.consultationType === 'in-person' && (
+        <div>
+          <label htmlFor="address" className="block text-sm font-medium text-gray-700 mb-1">
+            Your Address *
+          </label>
+          <textarea
+            id="address"
+            required
+            rows={2}
+            value={formData.address}
+            onChange={(e) => setFormData({ ...formData, address: e.target.value })}
+            className={inputClass}
+            placeholder="Street address, city, ZIP"
+          />
+        </div>
+      )}
+
+      <div>
         <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
           Message
         </label>
@@ -113,7 +173,7 @@ export default function LeadForm({ className = '' }: LeadFormProps) {
           rows={4}
           value={formData.message}
           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+          className={inputClass}
           placeholder="Tell us about your organization needs..."
         />
       </div>
@@ -123,7 +183,7 @@ export default function LeadForm({ className = '' }: LeadFormProps) {
         disabled={status === 'submitting'}
         className="w-full bg-teal-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-teal-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        {status === 'submitting' ? 'Sending...' : 'Schedule Free Consultation'}
+        {status === 'submitting' ? 'Sending...' : 'Schedule Consultation'}
       </button>
 
       {status === 'success' && (

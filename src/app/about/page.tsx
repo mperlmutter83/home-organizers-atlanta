@@ -66,7 +66,7 @@ export default function AboutPage() {
                 href="/contact"
                 className="inline-block bg-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-teal-700 transition-colors"
               >
-                Schedule Your Free Consultation
+                Schedule Your Consultation
               </Link>
             </div>
             <div>
@@ -157,13 +157,13 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Transform Your Space with Our Expertise</h2>
           <p className="text-xl text-teal-100 mb-8">
-            Discover how our tailored organization solutions can bring harmony to your home or office. Schedule a free consultation today and let us show you the path to a clutter-free life.
+            Discover how our tailored organization solutions can bring harmony to your home or office. Schedule a consultation today and let us show you the path to a clutter-free life.
           </p>
           <Link
             href="/contact"
             className="inline-block bg-white text-teal-700 px-8 py-4 rounded-lg font-semibold hover:bg-teal-50 transition-colors"
           >
-            Book Your Free Consultation
+            Book Your Consultation
           </Link>
         </div>
       </section>

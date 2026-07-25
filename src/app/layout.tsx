@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     default: "Home Organizers Atlanta | Professional Organization Services",
     template: "%s | Home Organizers Atlanta",
   },
-  description: "Transform your space with Atlanta's premier home and office organization experts. Free consultations. Serving Atlanta and surrounding areas since 2010.",
+  description: "Transform your space with Atlanta's premier home and office organization experts. Serving Atlanta and surrounding areas since 2010.",
   keywords: ["home organization", "professional organizer", "Atlanta organizer", "decluttering", "office organization", "closet organization"],
   openGraph: {
     title: "Home Organizers Atlanta | Professional Organization Services",

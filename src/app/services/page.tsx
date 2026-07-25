@@ -71,7 +71,7 @@ export default function ServicesPage() {
                 href="/contact"
                 className="inline-block bg-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-teal-700 transition-colors"
               >
-                Get Your Free Consultation
+                Schedule Your Consultation
               </Link>
             </div>
             <div>
@@ -163,7 +163,7 @@ export default function ServicesPage() {
       <section className="py-20 bg-teal-50">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Schedule Your Free Consultation Today</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Schedule Your Consultation Today</h2>
             <p className="text-xl text-gray-600">
               Discover how our organization services can transform your space and simplify your life.
             </p>
@@ -180,14 +180,14 @@ export default function ServicesPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Transform Your Space Today</h2>
           <p className="text-xl text-teal-100 mb-8">
-            Ready to reclaim your space and bring order to your life? Contact us now to schedule a complimentary consultation and discover how our expert team can help you create lasting organization solutions tailored to your needs.
+            Ready to reclaim your space and bring order to your life? Contact us now to schedule a consultation and discover how our expert team can help you create lasting organization solutions tailored to your needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
               className="bg-white text-teal-700 px-8 py-4 rounded-lg font-semibold hover:bg-teal-50 transition-colors"
             >
-              Schedule Your Free Consultation
+              Schedule Your Consultation
             </Link>
             <a
               href="tel:+14047379453"

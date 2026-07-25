@@ -3,7 +3,7 @@ import LeadForm from '@/components/LeadForm';
 
 export const metadata: Metadata = {
   title: 'Contact Us',
-  description: 'Contact Home Organizers Atlanta for a free consultation. Call (404) 737-9453 or fill out our form. Serving Atlanta and surrounding areas.',
+  description: 'Contact Home Organizers Atlanta to schedule a consultation. Call (404) 737-9453 or fill out our form. Serving Atlanta and surrounding areas.',
 };
 
 export default function ContactPage() {
@@ -14,7 +14,7 @@ export default function ContactPage() {
     },
     {
       question: 'How does the consultation process work?',
-      answer: 'Our free consultation involves an in-depth discussion to understand your goals, followed by an assessment of your space to create a customized plan.',
+      answer: 'Our consultation involves an in-depth discussion to understand your goals, followed by an assessment of your space to create a customized plan.',
     },
     {
       question: 'What areas do you serve?',
@@ -158,9 +158,9 @@ export default function ContactPage() {
             {/* Lead Form */}
             <div>
               <div className="bg-gray-50 rounded-2xl p-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-2">Schedule Your Free Consultation</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-2">Schedule Your Consultation</h2>
                 <p className="text-gray-600 mb-6">
-                  Ready to transform your space? Fill out our simple form to request a complimentary consultation.
+                  Ready to transform your space? Fill out our simple form to schedule a consultation.
                 </p>
                 <LeadForm />
               </div>
@@ -198,9 +198,9 @@ export default function ContactPage() {
       {/* CTA */}
       <section className="py-20 bg-teal-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Schedule Your Free Consultation Today</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Schedule Your Consultation Today</h2>
           <p className="text-xl text-teal-100 mb-8">
-            Ready to take control of your space and reduce stress? Book a complimentary consultation with our experts.
+            Ready to take control of your space and reduce stress? Book a consultation with our experts.
           </p>
           <a
             href="tel:+14047379453"
