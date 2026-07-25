@@ -76,8 +76,8 @@ export default function ServicesPage() {
             </div>
             <div>
               <img
-                src="/images/garage-main.jpg"
-                alt="Professionally organized garage by Home Organizers Atlanta"
+                src="/images/shelving-unit.jpg"
+                alt="Organized built-in shelving unit by Home Organizers Atlanta"
                 className="rounded-2xl shadow-2xl w-full"
               />
             </div>
@@ -150,8 +150,8 @@ export default function ServicesPage() {
             </div>
             <div>
               <img
-                src="/images/garage-main.jpg"
-                alt="Organized garage cabinets and workspace"
+                src="/images/laundry-room.jpg"
+                alt="Organized laundry room with shelving and baskets"
                 className="rounded-2xl shadow-xl w-full"
               />
             </div>

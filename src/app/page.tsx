@@ -116,6 +116,55 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Our Work Gallery */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Work</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Real spaces transformed by Home Organizers Atlanta — from garages and kitchens to laundry rooms and home offices.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="md:col-span-2 lg:col-span-2">
+              <img
+                src="/images/garage-main.jpg"
+                alt="Organized garage with pegboard and cabinets"
+                className="rounded-2xl shadow-lg w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <img
+                src="/images/kitchen-drawer.jpg"
+                alt="Organized kitchen drawer with utensils"
+                className="rounded-2xl shadow-lg w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <img
+                src="/images/desk-wall-unit.jpg"
+                alt="Organized built-in desk and bookshelves"
+                className="rounded-2xl shadow-lg w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <img
+                src="/images/shelving-unit.jpg"
+                alt="Organized built-in shelving unit"
+                className="rounded-2xl shadow-lg w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <img
+                src="/images/laundry-room.jpg"
+                alt="Organized laundry room with shelving and baskets"
+                className="rounded-2xl shadow-lg w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-teal-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

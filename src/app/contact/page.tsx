@@ -69,8 +69,8 @@ export default function ContactPage() {
             </div>
             <div>
               <img
-                src="/images/garage-main.jpg"
-                alt="Professionally organized garage by Home Organizers Atlanta"
+                src="/images/kitchen-drawer.jpg"
+                alt="Organized kitchen drawer with utensils by Home Organizers Atlanta"
                 className="rounded-2xl shadow-2xl w-full"
               />
             </div>
