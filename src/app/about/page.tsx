@@ -7,29 +7,6 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
-  const timeline = [
-    {
-      year: '2010',
-      title: 'Company Founded',
-      description: 'Home Organizers Atlanta was established with a mission to bring order and peace to homes and offices across Atlanta.',
-    },
-    {
-      year: '2012',
-      title: 'First Major Project',
-      description: 'We successfully completed our first large-scale office organization project, setting a new standard for corporate organization solutions.',
-    },
-    {
-      year: '2015',
-      title: 'Expansion of Services',
-      description: 'Introduced specialized services for busy professionals, including digital organization and time management systems.',
-    },
-    {
-      year: '2020',
-      title: 'Award-Winning Innovations',
-      description: "Our innovative approach to home organization earned us the prestigious 'Best of Atlanta' award in the home services category.",
-    },
-  ];
-
   const awards = [
     {
       year: '2018',
@@ -97,35 +74,6 @@ export default function AboutPage() {
             <p className="font-semibold text-gray-900">
               We believe that a well-organized space is the foundation of a balanced and fulfilling lifestyle.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Timeline */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 text-center">Our Journey Through the Years</h2>
-          <p className="text-xl text-gray-600 text-center mb-12">
-            Since our inception, Home Organizers Atlanta has been dedicated to transforming spaces and lives.
-          </p>
-
-          <div className="space-y-8">
-            {timeline.map((item, index) => (
-              <div key={index} className="flex gap-6">
-                <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
-                    {item.year}
-                  </div>
-                  {index < timeline.length - 1 && (
-                    <div className="w-0.5 h-full bg-teal-200 mt-2" />
-                  )}
-                </div>
-                <div className="pb-8">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
-                  <p className="text-gray-600">{item.description}</p>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
