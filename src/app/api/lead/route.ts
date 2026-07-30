@@ -28,7 +28,7 @@ export async function POST(request: NextRequest) {
 
     const parts = [
       service ? `Service: ${serviceLabels[service] ?? service}` : null,
-      consultationType ? `Consultation preference: ${consultationType === 'in-person' ? 'In-Person' : 'Virtual'}` : null,
+      consultationType ? `Consultation preference: ${consultationType === 'in-person' ? 'In-Person' : consultationType === 'zoom' ? 'Zoom' : 'Virtual'}` : null,
       consultationType === 'in-person' && address ? `Address: ${address}` : null,
       message || null,
     ].filter(Boolean);

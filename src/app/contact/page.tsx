@@ -160,7 +160,7 @@ export default function ContactPage() {
               <div className="bg-gray-50 rounded-2xl p-8">
                 <h2 className="text-2xl font-bold text-gray-900 mb-2">Schedule Your Consultation</h2>
                 <p className="text-gray-600 mb-6">
-                  Ready to transform your space? Fill out our simple form to schedule a consultation.
+                  Ready to transform your space? We offer a free 15-minute consultation — fill out our simple form to schedule.
                 </p>
                 <LeadForm />
               </div>

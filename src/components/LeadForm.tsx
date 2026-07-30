@@ -132,7 +132,7 @@ export default function LeadForm({ className = '' }: LeadFormProps) {
 
       <div>
         <label htmlFor="consultationType" className="block text-sm font-medium text-gray-700 mb-1">
-          Do you prefer an in-person or virtual consultation? *
+          Will this appointment be Zoom or in-person? *
         </label>
         <select
           id="consultationType"
@@ -143,7 +143,7 @@ export default function LeadForm({ className = '' }: LeadFormProps) {
         >
           <option value="">Select an option</option>
           <option value="in-person">In-Person Consultation</option>
-          <option value="virtual">Virtual Consultation</option>
+          <option value="zoom">Zoom Consultation</option>
         </select>
       </div>
 
@@ -177,6 +177,10 @@ export default function LeadForm({ className = '' }: LeadFormProps) {
           placeholder="Tell us about your organization needs..."
         />
       </div>
+
+      <p className="text-xs text-gray-500">
+        We offer a free 15-minute consultation.
+      </p>
 
       <button
         type="submit"
