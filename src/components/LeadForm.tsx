@@ -38,6 +38,11 @@ export default function LeadForm({ className = '' }: LeadFormProps) {
       });
 
       if (response.ok) {
+        // GA4/GTM conversion event — picked up by the site's GTM container when present.
+        const dlWindow = window as unknown as { dataLayer?: Record<string, unknown>[] };
+        dlWindow.dataLayer = dlWindow.dataLayer ?? [];
+        dlWindow.dataLayer.push({ event: "generate_lead" });
+
         setStatus('success');
         setFormData({ name: '', email: '', phone: '', service: '', consultationType: '', address: '', message: '' });
         submissionId.current = crypto.randomUUID();
