@@ -3,7 +3,7 @@ import LeadForm from '@/components/LeadForm';
 
 export const metadata: Metadata = {
   title: 'Contact Us',
-  description: 'Contact Home Organizers Atlanta to schedule a consultation. Call (404) 737-9453 or fill out our form. Serving Atlanta and surrounding areas.',
+  description: 'Contact Home Organizers Atlanta to schedule a virtual consultation over Zoom. Call (404) 737-9453 or fill out our form. Serving Atlanta and surrounding areas.',
 };
 
 export default function ContactPage() {
@@ -14,7 +14,7 @@ export default function ContactPage() {
     },
     {
       question: 'How does the consultation process work?',
-      answer: 'Our consultation involves an in-depth discussion to understand your goals, followed by an assessment of your space to create a customized plan.',
+      answer: 'Your consultation is held virtually over Zoom. We start with an in-depth discussion to understand your goals, then walk through your space together on video to create a customized plan.',
     },
     {
       question: 'What areas do you serve?',
@@ -26,11 +26,11 @@ export default function ContactPage() {
     },
     {
       question: 'Do you offer virtual organization services?',
-      answer: 'Yes, we provide virtual consultations and guidance for clients who prefer remote assistance in organizing their spaces.',
+      answer: 'Yes. All of our appointments are virtual: we meet over Zoom to assess your space, build your plan, and guide you step by step.',
     },
     {
-      question: 'What should I expect during the first visit?',
-      answer: 'During the initial visit, we assess your space, discuss your needs, and begin developing a personalized organization strategy.',
+      question: 'What should I expect during the first appointment?',
+      answer: 'Your first appointment is a virtual session over Zoom. We look at your space together on video, discuss your needs, and begin developing a personalized organization strategy.',
     },
     {
       question: 'Are your services confidential?',
@@ -160,7 +160,7 @@ export default function ContactPage() {
               <div className="bg-gray-50 rounded-2xl p-8">
                 <h2 className="text-2xl font-bold text-gray-900 mb-2">Schedule Your Consultation</h2>
                 <p className="text-gray-600 mb-6">
-                  Ready to transform your space? We offer a free 15-minute consultation — fill out our simple form to schedule.
+                  Ready to transform your space? We offer a free 15-minute virtual consultation over Zoom — fill out our simple form to schedule.
                 </p>
                 <LeadForm />
               </div>
@@ -200,7 +200,7 @@ export default function ContactPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Schedule Your Consultation Today</h2>
           <p className="text-xl text-teal-100 mb-8">
-            Ready to take control of your space and reduce stress? Book a consultation with our experts.
+            Ready to take control of your space and reduce stress? Book a virtual consultation with our experts.
           </p>
           <a
             href="tel:+14047379453"

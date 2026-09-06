@@ -12,8 +12,6 @@ export default function LeadForm({ className = '' }: LeadFormProps) {
     email: '',
     phone: '',
     service: '',
-    consultationType: '',
-    address: '',
     message: '',
   });
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
@@ -44,7 +42,7 @@ export default function LeadForm({ className = '' }: LeadFormProps) {
         dlWindow.dataLayer.push({ event: "generate_lead" });
 
         setStatus('success');
-        setFormData({ name: '', email: '', phone: '', service: '', consultationType: '', address: '', message: '' });
+        setFormData({ name: '', email: '', phone: '', service: '', message: '' });
         submissionId.current = crypto.randomUUID();
         startedAt.current = Date.now();
       } else {
@@ -135,39 +133,10 @@ export default function LeadForm({ className = '' }: LeadFormProps) {
         </select>
       </div>
 
-      <div>
-        <label htmlFor="consultationType" className="block text-sm font-medium text-gray-700 mb-1">
-          Will this appointment be Zoom or in-person? *
-        </label>
-        <select
-          id="consultationType"
-          required
-          value={formData.consultationType}
-          onChange={(e) => setFormData({ ...formData, consultationType: e.target.value, address: '' })}
-          className={inputClass}
-        >
-          <option value="">Select an option</option>
-          <option value="in-person">In-Person Consultation</option>
-          <option value="zoom">Zoom Consultation</option>
-        </select>
+      {/* Virtual-only: no Zoom / in-person choice and no address field. */}
+      <div className="rounded-lg border border-teal-100 bg-teal-50 px-4 py-3 text-sm text-teal-800">
+        All appointments are virtual and held over Zoom.
       </div>
-
-      {formData.consultationType === 'in-person' && (
-        <div>
-          <label htmlFor="address" className="block text-sm font-medium text-gray-700 mb-1">
-            Your Address *
-          </label>
-          <textarea
-            id="address"
-            required
-            rows={2}
-            value={formData.address}
-            onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-            className={inputClass}
-            placeholder="Street address, city, ZIP"
-          />
-        </div>
-      )}
 
       <div>
         <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
@@ -184,7 +153,7 @@ export default function LeadForm({ className = '' }: LeadFormProps) {
       </div>
 
       <p className="text-xs text-gray-500">
-        We offer a free 15-minute consultation.
+        We offer a free 15-minute virtual consultation.
       </p>
 
       <button
