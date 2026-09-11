@@ -39,6 +39,22 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* RFM site data - pushed before GTM loads */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  rfm: {
+    schema_version: "1.0",
+    site_id: "home_organizers_atlanta",
+    provider_id: "27332af3-8f64-49b0-b2da-d2a21df27f35",
+    provider_name: "Home Organizers Atlanta",
+    service_category: "home_organization",
+    market: "atlanta"
+  }
+});`,
+          }}
+        />
         {/* Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{
